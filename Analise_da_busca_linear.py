@@ -129,14 +129,15 @@ fig, axes = plt.subplots(2, 1, figsize=(10, 12))  # Criando 2 subgráficos (2 li
 sns.lineplot(ax=axes[0], data=df, x="Posicao", y="Instrucoes",
              color="red", marker="*", markersize=10)
 axes[0].set_title('Número de Instruções vs. Posição da Chave')
-axes[0].set_xlabel('Posição da Chave')
+axes[0].set_xlabel('Posição da Chave\n')
 axes[0].set_ylabel('Número de Instruções')
+
 
 # Gráfico inferior: Tempo de Execução vs. Posição da Chave
 sns.lineplot(ax=axes[1], data=df, x="Posicao", y="Tempo",
              color="blue", marker="o", markersize=8)
 axes[1].set_title('Tempo de Execução vs. Posição da Chave')
-axes[1].set_xlabel('Posição da Chave')
+axes[1].set_xlabel('Posição da Chave\n')
 axes[1].set_ylabel('Tempo de Execução (s)')
 
 # Ajustando layout para melhor visualização
