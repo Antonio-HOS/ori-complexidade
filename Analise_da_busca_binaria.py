@@ -141,3 +141,4 @@ plt.tight_layout()
 # Exibindo os gráficos
 plt.show()
 
+

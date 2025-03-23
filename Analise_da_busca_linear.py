@@ -110,7 +110,6 @@ print("\n\n\n")
 import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
-# Analisando graficamente
 
 # Gerando resultados para análise
 lstresults = []
@@ -119,18 +118,31 @@ for posicao in range(0, len(testes)):  # Amostragem de posições
     result = PesquisaLinear2(dados, chave)
     lstresults.append(result)
 
-# Gerando um Dataframe, isso ajudará na produção dos gráficos
-# Veremos mais sobre Dataframes e Gráficos em próximos capítulos
-df = pd.DataFrame(lstresults, columns =['Chave', 'Existe', 'Posicao', 'Tempo', 'Instrucoes'])
+# Criando um DataFrame para análise
+df = pd.DataFrame(lstresults, columns=['Chave', 'Existe', 'Posicao', 'Tempo', 'Instrucoes'])
 
-# Criando o ambiente do gráfico
+# Criando o ambiente dos gráficos
 sns.set_style("white")
-plt.figure(figsize=(10, 10))
+fig, axes = plt.subplots(2, 1, figsize=(10, 12))  # Criando 2 subgráficos (2 linhas, 1 coluna)
 
-# Gráfico de Dispersão
-graf_linha = sns.lineplot(data = df, x="Posicao", y="Instrucoes",
-                          color="red", marker="*", markersize=10, markers="True")
+# Gráfico superior: Número de Instruções vs. Posição da Chave
+sns.lineplot(ax=axes[0], data=df, x="Posicao", y="Instrucoes",
+             color="red", marker="*", markersize=10)
+axes[0].set_title('Número de Instruções vs. Posição da Chave')
+axes[0].set_xlabel('Posição da Chave')
+axes[0].set_ylabel('Número de Instruções')
+
+# Gráfico inferior: Tempo de Execução vs. Posição da Chave
+sns.lineplot(ax=axes[1], data=df, x="Posicao", y="Tempo",
+             color="blue", marker="o", markersize=8)
+axes[1].set_title('Tempo de Execução vs. Posição da Chave')
+axes[1].set_xlabel('Posição da Chave')
+axes[1].set_ylabel('Tempo de Execução (s)')
+
+# Ajustando layout para melhor visualização
+plt.tight_layout()
 plt.show()
+
 
 
 
