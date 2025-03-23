@@ -71,8 +71,8 @@ def PesquisaBinaria(lista, chave):
 # Testando a função de Pesquisa Binária
 testes = [497624, 282062, 689410, 554834, 698783, 366777, 149528, 400180, 11388, 392959, 505979, 287361, 674663, 849712, 482574]
 testes2 = [1000, 10000, 100000, 500000]
-for i in range(0, len(testes2)):
-    posicao = testes2[i]
+for i in range(0, len(testes)):
+    posicao = testes[i]
     chave = dados[posicao]
     print(" Valor e posição: " + str(chave) + " - " + str(posicao))
     result  = PesquisaBinaria(dados_ord, chave)
