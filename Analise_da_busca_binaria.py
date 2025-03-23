@@ -97,6 +97,13 @@ lstresults = [[731821, True, 731643, 0.0, 84],
 [645388, True, 645157, 0.0, 84],
 [83138, True, 83149, 0.0, 84]]
 
+# Resultados das posições de teste 1000, 10000, 100000 e 500000
+'''
+lstresults = [[26152, True, 26093, 0.0, 76],
+[662666, True, 662614, 0.0, 76],
+[807285, True, 807155, 0.0, 80],
+[53778, True, 53552, 0.0, 76]]
+'''
 
 # Questão: Verifique de o Pandas e o Dataframe são muito usados em ciência de dados?
 #          Imagine como seria um gráfico (Tempo vs Posição da Chave) e (Número de Instruções vs Posição)
@@ -142,3 +149,67 @@ plt.tight_layout()
 plt.show()
 
 
+"""
+CONCLUSÕES:
+1 - Para concluir a atividade, acrescente a seguir os resultados (Istresults e gráfico) do laboratório de Busca Linear e deste laboratório de Busca Binária
+
+Busca Binária: 
+
+chave  | achou | pos | tempo | instruções
+-------------------------------------------
+[[731821, True, 731643, 0.0, 84],
+[806405, True, 806307, 0.0, 80],
+[140007, True, 139799, 0.0, 64],
+[597361, True, 597127, 0.0, 72],
+[759676, True, 759786, 0.0, 72],
+[173878, True, 173866, 0.0, 80],
+[248386, True, 247666, 0.0, 76],
+[104662, True, 104447, 0.0, 76],
+[656223, True, 656095, 0.0, 64],
+[218850, True, 218393, 0.0, 76],
+[837538, True, 837549, 0.0, 84],
+[942437, True, 942582, 0.0, 76],
+[357223, True, 356698, 0.0, 76],
+[645388, True, 645157, 0.0, 84],
+[83138, True, 83149, 0.0, 84]]
+
+Busca Linear: 
+chave  | achou | pos | tempo | instruções
+-------------------------------------------
+[731821, True, 497624, 0.03370809555053711, 1990506]
+[806405, True, 26664, 0.002403736114501953, 106666]
+[140007, True, 458088, 0.029071569442749023, 1832362]
+[597361, True, 504037, 0.033954620361328125, 2016158]
+[759676, True, 102106, 0.008008003234863281, 408434]
+[173878, True, 366777, 0.024781227111816406, 1467118]
+[248386, True, 149528, 0.010831594467163086, 598122]
+[104662, True, 285557, 0.017258167266845703, 1142238]
+[656223, True, 11388, 0.0008547306060791016, 45562]
+[218850, True, 392959, 0.025435209274291992, 1571846]
+[837538, True, 505979, 0.033501386642456055, 2023926]
+[942437, True, 88801, 0.005477190017700195, 355214]
+[357223, True, 183631, 0.012547731399536133, 734534]
+[645388, True, 849712, 0.05525994300842285, 3398858]
+[83138, True, 482574, 0.030319929122924805, 1930306]
+
+Para melhores comparações, vá no arquivo Grafico_BinariaXLinear.py, lá mostra os gráficos comparativos entre os dois algoritmos.
+
+2 - Para cada um dos valores de posição a seguir, leia no gráfico qual o número de instruções (esforço) para realizar a busca
+o Poisições: 1000, 10000, 100000, 500000
+
+Posição 1000: 76 instruções
+Posição 10000: 76 instruções
+Posição 100000: 80 instruções
+Posição 500000: 76 instruções
+
+chave  | achou | pos | tempo | instruções
+-------------------------------------------
+[26152, True, 26093, 0.0, 76],
+[662666, True, 662614, 0.0, 76],
+[807285, True, 807155, 0.0, 80],
+[53778, True, 53552, 0.0, 76]
+
+3 - Para cada busca, apresente qual o "formato" da função de complexidade
+O formato da função de complexidade é logarítmica, pois o número de instruções cresce de forma logarítmica em relação ao tamanho da lista.
+    T(n)=O(logn)
+"""

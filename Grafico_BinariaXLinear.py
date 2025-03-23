@@ -1,5 +1,6 @@
 # Os resultados da execução acima devem ser copiados para esta lista
-lstresults_binaria = [[731821, True, 731643, 0.0, 84],
+lstresults_binaria = [
+[731821, True, 731643, 0.0, 84],
 [806405, True, 806307, 0.0, 80],
 [140007, True, 139799, 0.0, 64],
 [597361, True, 597127, 0.0, 72],
@@ -65,3 +66,53 @@ plt.ylabel('Número de Instruções')
 plt.legend()
 
 plt.show()
+
+
+""" 
+Conclusão Baseada nos Experimentos:
+1 - Para concluir a atividade, acrescente a seguir os resultados (Istresults e gráfico) do laboratório de Busca Linear e deste laboratório de Busca Binária
+
+Busca Binária:
+chave  | achou | pos | tempo | instruções
+-------------------------------------------
+[731821, True, 731643, 0.0, 84],
+[806405, True, 806307, 0.0, 80],
+[140007, True, 139799, 0.0, 64],
+[597361, True, 597127, 0.0, 72],
+[759676, True, 759786, 0.0, 72],
+[173878, True, 173866, 0.0, 80],
+[248386, True, 247666, 0.0, 76],
+[104662, True, 104447, 0.0, 76],
+[656223, True, 656095, 0.0, 64],
+[218850, True, 218393, 0.0, 76],
+[837538, True, 837549, 0.0, 84],
+[942437, True, 942582, 0.0, 76],
+[357223, True, 356698, 0.0, 76],
+[645388, True, 645157, 0.0, 84],
+[83138, True, 83149, 0.0, 84]]
+
+Busca Linear:
+chave  | achou | pos | tempo | instruções
+[731821, True, 497624, 0.0, 1990506],
+[806405, True, 26664, 0.0, 106666],
+[140007, True, 458088, 0.0, 1832362],
+[597361, True, 504037, 0.0, 2016158],
+[759676, True, 102106, 0.0, 408434],
+[173878, True, 366777, 0.0, 1467118],
+[248386, True, 149528, 0.0, 598122],
+[104662, True, 285557, 0.0, 1142238],
+[656223, True, 11388, 0.0, 45562],
+[218850, True, 392959, 0.0, 1571846],
+[837538, True, 505979, 0.0, 2023926],
+[942437, True, 88801, 0.0, 355214],
+[357223, True, 183631, 0.0, 734534],
+[645388, True, 849712, 0.0, 3398858],
+[83138, True, 482574, 0.0, 1930306]]
+
+OBSERVAÇÕES:
+1. A Pesquisa Binária é muito mais eficiente que a Pesquisa Linear, pois reduz o número de instruções de N para log2(N).
+2. O tempo de execução da Pesquisa Binária é muito menor que o da Pesquisa Linear.
+3. O gráfico de Dispersão mostra que o número de instruções é proporcional à posição da chave.
+
+As imagens estão disponíveis no repositório do GitHub.
+"""
